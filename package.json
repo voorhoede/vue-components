@@ -1,0 +1,27 @@
+{
+  "name": "vue-components",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/vue-lazy-load",
+    "packages/vue-dato-video"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "changeset": "changeset"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@types/node": "^18.16.9",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/test-utils": "^2.3.2",
+    "@vue/tsconfig": "^0.4.0",
+    "happy-dom": "^9.18.3",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.6",
+    "vite-plugin-dts": "^2.3.0",
+    "vitest": "^0.31.0",
+    "vue-tsc": "^1.6.5"
+  }
+}
