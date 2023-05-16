@@ -1,0 +1,30 @@
+{
+  "name": "@voorhoede/vue-dato-video",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./dist/vue-dato-video.js",
+        "types": "./dist/main.d.ts"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@voorhoede/vue-lazy-load": "^2.0.0",
+    "vue": "^3.3.2"
+  }
+}
