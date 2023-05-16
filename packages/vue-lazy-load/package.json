@@ -1,0 +1,28 @@
+{
+  "name": "@voorhoede/vue-lazy-load",
+  "version": "1.2.9",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./dist/vue-lazy-load.js",
+        "types": "./dist/main.d.ts"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "vue": "^3.3.2"
+  },
+  "author": "De Voorhoede",
+  "license": "ISC"
+}
