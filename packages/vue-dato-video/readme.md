@@ -1,18 +1,47 @@
-# Vue 3 + TypeScript + Vite
+# @voorhoede/vue-dato-video
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Fully optimized video component for videos from Dato CMS.
 
-## Recommended IDE Setup
+## Features
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- ✅ Supports both **Vimeo** and **YouTube**.
+- ✅ Has a **fixed ratio**, so space is reserved before the video is loaded. This prevents annoying layout jumps.
+- ✅ Supports an optional **video caption**.
+- ✅ Has a **cover image** that lazy loads, meaning the image will only be downloaded when necessary, resulting in much faster page loads.
+- ✅ Supports autoplay.
+- ✅ Vapor Mode ready.
 
-## Type Support For `.vue` Imports in TS
+## Installation
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+```
+npm install @voorhoede/vue-dato-video
+```
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## Usage
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+### Bundler (Webpack, Rollup)
+
+```js
+import Vue from 'vue'
+import VueDatoVideo from '@voorhoede/vue-dato-video'
+
+Vue.use(VueDatoVideo)
+```
+
+The CSS file should be imported seperately in the way you desire. It's located at `@voorhoede/vue-dato-video/dist/style.css`.
+
+<!-- The API section is auto generated, don't touch please -->
+
+## API
+
+### vue-dato-video 
+
+#### props 
+
+- `video` ***Object*** (*required*) 
+
+- `autoplay` ***Boolean*** (*required*) 
+
+- `loop` ***Boolean*** (*required*) 
+
+- `mute` ***Boolean*** (*required*) 

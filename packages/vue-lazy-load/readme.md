@@ -1,18 +1,46 @@
-# Vue 3 + TypeScript + Vite
+# @voorhoede/vue-lazy-load
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**Component to lazy load content using the Intersection Observer API**
 
-## Recommended IDE Setup
+This component uses the [Intersection observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to detect when its content enters or exists the browser's viewport. The content only loads just before it comes into view, reducing initial page weight and load time.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+This component is Vapor Mode ready!
 
-## Type Support For `.vue` Imports in TS
+## Installation
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+```
+npm install @voorhoede/vue-lazy-load
+```
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## Usage
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+### Bundler (Webpack, Rollup)
+
+```js
+import Vue from 'vue'
+import VueLazyLoad from '@voorhoede/vue-lazy-load'
+
+Vue.use(VueLazyLoad)
+```
+
+<!-- The API section is auto generated, don't touch please -->
+
+## API
+
+### vue-lazy-load 
+
+#### slots 
+
+- `default` 
+
+- `placeholder` Content that is loaded as a placeholder until it comes into view 
+
+#### props 
+
+- `root-margin` ***String*** (*optional*) `default: '0px 0px 0px 0px'` 
+
+  See IntersectionOberserver rootMargin [docs](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options) 
+
+- `threshold` ***Number|Array*** (*optional*) 
+
+  See IntersectionOberserver treshold [docs](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options) 
