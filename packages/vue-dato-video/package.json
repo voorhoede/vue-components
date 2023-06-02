@@ -9,6 +9,9 @@
         "default": "./dist/vue-dato-video.js",
         "types": "./dist/main.d.ts"
       }
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css"
     }
   },
   "files": [
