@@ -13,18 +13,31 @@ npm install @voorhoede/vue-lazy-load
 ```
 
 ## Usage
-
-### Bundler (Webpack, Rollup)
+Import the component and register it globally in your Vue instance:
 
 ```js
-import Vue from 'vue'
-import VueLazyLoad from '@voorhoede/vue-lazy-load'
+import { createApp } from "vue";
+import App from "./App.vue";
+import { VueLazyLoad } from '@voorhoede/vue-lazy-load'
 
-Vue.use(VueLazyLoad)
+const app = createApp(App);
+
+app
+  .component("vue-lazy-load", VueLazyLoad)
+  .mount("#app");
 ```
 
-<!-- The API section is auto generated, don't touch please -->
+or locally in your component:
 
+```js
+import { VueLazyLoad } from '@voorhoede/vue-lazy-load'
+```
+
+Use the component in your template:
+
+```html
+<vue-lazy-load><b>This content is lazy loaded</b><vue-lazy-load>
+```
 ## API
 
 ### vue-lazy-load 
@@ -39,8 +52,8 @@ Vue.use(VueLazyLoad)
 
 - `root-margin` ***String*** (*optional*) `default: '0px 0px 0px 0px'` 
 
-  See IntersectionOberserver rootMargin [docs](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options) 
+  See IntersectionObserver rootMargin [docs](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options) 
 
-- `threshold` ***Number|Array*** (*optional*) 
+- `threshold` ***Number | Array*** (*optional*) `default: 0`
 
-  See IntersectionOberserver treshold [docs](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options) 
+  See IntersectionObserver treshold [docs](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options) 
