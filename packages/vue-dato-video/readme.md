@@ -4,12 +4,12 @@ Fully optimized video component for videos from Dato CMS.
 
 ## Features
 
-✅ Supports both **Vimeo** and **YouTube**.
-✅ Has a **fixed ratio**, so space is reserved before the video is loaded. This prevents annoying layout jumps.
-✅ Supports an optional **video caption**.
-✅ Has a **cover image** that lazy loads, meaning the image will only be downloaded when necessary, resulting in much faster page loads.
-✅ Supports autoplay.
-✅ Vapor Mode ready.
+- Supports both **Vimeo** and **YouTube**.
+- Has a **fixed ratio**, so space is reserved before the video is loaded. This prevents annoying layout jumps.
+- Supports an optional **video caption**.
+- Has a **cover image** that lazy loads, meaning the image will only be downloaded when necessary, resulting in much faster page loads.
+- Supports autoplay.
+- Vapor Mode ready.
 
 ## Installation
 
