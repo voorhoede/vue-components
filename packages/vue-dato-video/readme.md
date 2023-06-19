@@ -1,18 +1,91 @@
-# Vue 3 + TypeScript + Vite
+# @voorhoede/vue-dato-video
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Fully optimized video component for videos from Dato CMS.
 
-## Recommended IDE Setup
+## Features
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- Supports both **Vimeo** and **YouTube**.
+- Has a **fixed ratio**, so space is reserved before the video is loaded. This prevents annoying layout jumps.
+- Supports an optional **video caption**.
+- Has a **cover image** that lazy loads, meaning the image will only be downloaded when necessary, resulting in much faster page loads.
+- Supports autoplay.
+- Vapor Mode ready.
 
-## Type Support For `.vue` Imports in TS
+## Installation
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+```
+npm install @voorhoede/vue-dato-video
+```
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## Usage
+Import the component and register it globally in your Vue instance:
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+```js
+import { createApp } from "vue";
+import App from "./App.vue";
+import { VueDatoVideo } from '@voorhoede/vue-dato-video'
+
+const app = createApp(App);
+
+app
+  .component("vue-dato-video", VueDatoVideo)
+  .mount("#app");
+```
+
+or locally in your component:
+
+```js
+import { VueDatoVideo } from '@voorhoede/vue-dato-video'
+```
+
+Use the component in your template:
+
+```vue
+<vue-dato-video
+  :loop="false"
+  :autoplay="false"
+  :mute="false"
+  :video="{
+    url: 'https://www.youtube.com/watch?v=AoIq7P6DJKU',
+    title: 'A Love Letter to Winter',
+    width: 480,
+    height: 270,
+    provider: 'youtube',
+    providerUid: 'AoIq7P6DJKU',
+    thumbnailUrl: 'https://i.ytimg.com/vi/AoIq7P6DJKU/hqdefault.jpg'
+  }"
+/>
+```
+
+The CSS file should be imported seperately in the way you desire. It's located at `@voorhoede/vue-dato-video/dist/style.css`.
+
+## API
+
+### vue-dato-video 
+
+#### props 
+
+- `video` ***Object*** (*required*)
+  - `provider` ***string*** (*required*)
+  The video provider. Options: `youtube`, `vimeo`
+  - `providerUid` ***string*** (*required*)
+    The Uid of the video provider. 
+  - `title` ***string*** (*optional*) `default: undefined`
+  The title of the video.
+  - `url` ***string*** (*required*)
+  The url of the video.
+  - `width` ***number*** (*required*)
+    Width of the video.
+  - `height` ***number*** (*required*)
+    Height of the video.
+  - `thumbnailUrl` ***string*** (*required*)
+    The thumbnail url of the video.
+
+- `autoplay` ***Boolean*** (*required*) 
+  Whether the video should autoplay.
+
+- `loop` ***Boolean*** (*required*) 
+  Whether the video should loop.
+
+- `mute` ***Boolean*** (*required*) 
+  Whether the video should be muted.
