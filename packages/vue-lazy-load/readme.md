@@ -35,7 +35,7 @@ import { VueLazyLoad } from '@voorhoede/vue-lazy-load'
 
 Use the component in your template:
 
-```html
+```vue
 <vue-lazy-load><b>This content is lazy loaded</b><vue-lazy-load>
 ```
 ## API
