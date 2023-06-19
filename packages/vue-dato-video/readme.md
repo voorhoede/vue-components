@@ -40,7 +40,7 @@ import { VueDatoVideo } from '@voorhoede/vue-dato-video'
 
 Use the component in your template:
 
-```html
+```vue
 <vue-dato-video
   :loop="false"
   :autoplay="false"
