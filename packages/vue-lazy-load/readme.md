@@ -50,10 +50,10 @@ Use the component in your template:
 
 #### props 
 
-- `root-margin` ***String*** (*optional*) `default: '0px 0px 0px 0px'` 
+- `root-margin` ***string*** (*optional*) `default: '0px 0px 0px 0px'` 
 
   See IntersectionObserver rootMargin [docs](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options) 
 
-- `threshold` ***Number | Array*** (*optional*) `default: 0`
+- `threshold` ***number | Array*** (*optional*) `default: 0`
 
   See IntersectionObserver treshold [docs](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options) 
