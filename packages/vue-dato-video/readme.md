@@ -41,20 +41,20 @@ import { VueDatoVideo } from '@voorhoede/vue-dato-video'
 Use the component in your template:
 
 ```vue
-<vue-dato-video
-  :loop="false"
-  :autoplay="false"
-  :mute="false"
-  :video="{
-    url: 'https://www.youtube.com/watch?v=AoIq7P6DJKU',
-    title: 'A Love Letter to Winter',
-    width: 480,
-    height: 270,
-    provider: 'youtube',
-    providerUid: 'AoIq7P6DJKU',
-    thumbnailUrl: 'https://i.ytimg.com/vi/AoIq7P6DJKU/hqdefault.jpg'
-  }"
-/>
+  <vue-dato-video
+    :loop="false"
+    :autoplay="false"
+    :mute="false"
+    :video="{
+      url: 'https://www.youtube.com/watch?v=AoIq7P6DJKU',
+      title: 'A Love Letter to Winter',
+      width: 480,
+      height: 270,
+      provider: 'youtube',
+      providerUid: 'AoIq7P6DJKU',
+      thumbnailUrl: 'https://i.ytimg.com/vi/AoIq7P6DJKU/hqdefault.jpg'
+    }"
+  />
 ```
 
 The CSS file should be imported seperately in the way you desire. It's located at `@voorhoede/vue-dato-video/dist/style.css`.
@@ -63,6 +63,11 @@ The CSS file should be imported seperately in the way you desire. It's located a
 
 ### vue-dato-video 
 
+#### slots 
+
+- `caption` Caption of the video
+
+- `playIcon` Play icon of the video
 #### props 
 
 - `video` ***Object*** (*required*)
@@ -81,11 +86,14 @@ The CSS file should be imported seperately in the way you desire. It's located a
   - `thumbnailUrl` ***string*** (*required*)
     The thumbnail url of the video.
 
-- `autoplay` ***Boolean*** (*required*) 
+- `autoplay` ***boolean*** (*required*) 
   Whether the video should autoplay.
 
-- `loop` ***Boolean*** (*required*) 
+- `loop` ***boolean*** (*required*) 
   Whether the video should loop.
 
-- `mute` ***Boolean*** (*required*) 
+- `mute` ***boolean*** (*required*) 
   Whether the video should be muted.
+
+- `playIconAlt` ***string*** (*optional*) `default: 'play video'`
+  The alt text for the play icon.
