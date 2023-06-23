@@ -97,7 +97,7 @@ const maxRatio = 1.5;
 const width = ref<number>(0);
 const root = ref<HTMLElement | null>(null);
 
-const playIconAlt = computed(() => props.playIconAlt ?? 'play video')
+const playIconAlt = computed(() => props.playIconAlt ?? "play video");
 
 const canvasHeight = computed(() => {
   // prevent canvas from getting a higher ratio than 3:2 (1.5:1)
