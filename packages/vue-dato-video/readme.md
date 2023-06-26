@@ -18,24 +18,23 @@ npm install @voorhoede/vue-dato-video
 ```
 
 ## Usage
+
 Import the component and register it globally in your Vue instance:
 
 ```js
 import { createApp } from "vue";
 import App from "./App.vue";
-import { VueDatoVideo } from '@voorhoede/vue-dato-video'
+import { VueDatoVideo } from "@voorhoede/vue-dato-video";
 
 const app = createApp(App);
 
-app
-  .component("vue-dato-video", VueDatoVideo)
-  .mount("#app");
+app.component("vue-dato-video", VueDatoVideo).mount("#app");
 ```
 
 or locally in your component:
 
 ```js
-import { VueDatoVideo } from '@voorhoede/vue-dato-video'
+import { VueDatoVideo } from "@voorhoede/vue-dato-video";
 ```
 
 Use the component in your template:
@@ -52,7 +51,7 @@ Use the component in your template:
     height: 270,
     provider: 'youtube',
     providerUid: 'AoIq7P6DJKU',
-    thumbnailUrl: 'https://i.ytimg.com/vi/AoIq7P6DJKU/hqdefault.jpg'
+    thumbnailUrl: 'https://i.ytimg.com/vi/AoIq7P6DJKU/hqdefault.jpg',
   }"
 />
 ```
@@ -61,31 +60,41 @@ The CSS file should be imported seperately in the way you desire. It's located a
 
 ## API
 
-### vue-dato-video 
+### vue-dato-video
 
-#### props 
+#### slots
 
-- `video` ***Object*** (*required*)
-  - `provider` ***string*** (*required*)
-  The video provider. Options: `youtube`, `vimeo`
-  - `providerUid` ***string*** (*required*)
-    The Uid of the video provider. 
-  - `title` ***string*** (*optional*) `default: undefined`
-  The title of the video.
-  - `url` ***string*** (*required*)
-  The url of the video.
-  - `width` ***number*** (*required*)
+- `caption` Caption of the video
+
+- `playIcon` Play icon of the video
+
+#### props
+
+- `video` **_Object_** (_required_)
+
+  - `provider` **_string_** (_required_)
+    The video provider. Options: `youtube`, `vimeo`
+  - `providerUid` **_string_** (_required_)
+    The Uid of the video provider.
+  - `title` **_string_** (_optional_) `default: undefined`
+    The title of the video.
+  - `url` **_string_** (_required_)
+    The url of the video.
+  - `width` **_number_** (_required_)
     Width of the video.
-  - `height` ***number*** (*required*)
+  - `height` **_number_** (_required_)
     Height of the video.
-  - `thumbnailUrl` ***string*** (*required*)
+  - `thumbnailUrl` **_string_** (_required_)
     The thumbnail url of the video.
 
-- `autoplay` ***Boolean*** (*required*) 
+- `autoplay` **_boolean_** (_required_)
   Whether the video should autoplay.
 
-- `loop` ***Boolean*** (*required*) 
+- `loop` **_boolean_** (_required_)
   Whether the video should loop.
 
-- `mute` ***Boolean*** (*required*) 
+- `mute` **_boolean_** (_required_)
   Whether the video should be muted.
+
+- `playIconAlt` **_string_** (_required_)
+  The alt text for the play icon.

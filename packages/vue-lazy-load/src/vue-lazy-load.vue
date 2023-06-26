@@ -14,51 +14,51 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref } from 'vue'
+import { onMounted, onBeforeUnmount, ref } from "vue";
 
 interface Props {
-  rootMargin?: string
-  threshold?: number | number[]
+  rootMargin?: string;
+  threshold?: number | number[];
 }
 
 const { rootMargin, threshold } = withDefaults(defineProps<Props>(), {
-  rootMargin: '0px 0px 0px 0px',
+  rootMargin: "0px 0px 0px 0px",
   threshold: 0,
-})
+});
 
-const isIntersected = ref(false)
-let observer: IntersectionObserver | null = null
-const root = ref<HTMLElement | null>(null)
+const isIntersected = ref(false);
+let observer: IntersectionObserver | null = null;
+const root = ref<HTMLElement | null>(null);
 
 const observe = () => {
-  const config = { root: null, rootMargin, threshold }
-  observer = new IntersectionObserver(onIntersection, config)
-  observer.observe(root.value!)
-}
+  const config = { root: null, rootMargin, threshold };
+  observer = new IntersectionObserver(onIntersection, config);
+  observer.observe(root.value!);
+};
 
 const onIntersection = (entries: IntersectionObserverEntry[]) => {
-  isIntersected.value = entries.some((entry) => entry.intersectionRatio > 0)
+  isIntersected.value = entries.some((entry) => entry.intersectionRatio > 0);
 
   if (isIntersected.value) {
-    unobserve()
+    unobserve();
   }
-}
+};
 
 const unobserve = () => {
   if (observer) {
-    observer.unobserve(root.value!)
+    observer.unobserve(root.value!);
   }
-}
+};
 
 onMounted(() => {
-  if ('IntersectionObserver' in window) {
-    observe()
+  if ("IntersectionObserver" in window) {
+    observe();
   } else {
-    isIntersected.value = true
+    isIntersected.value = true;
   }
-})
+});
 
 onBeforeUnmount(() => {
-  unobserve()
-})
+  unobserve();
+});
 </script>
