@@ -96,5 +96,5 @@ The CSS file should be imported seperately in the way you desire. It's located a
 - `mute` **_boolean_** (_required_)
   Whether the video should be muted.
 
-- `playIconAlt` **_string_** (_optional_) `default: 'play video'`
+- `playIconAlt` **_string_** (_required_)
   The alt text for the play icon.

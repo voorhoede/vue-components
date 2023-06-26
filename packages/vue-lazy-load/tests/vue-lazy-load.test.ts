@@ -4,7 +4,7 @@ import VueLazyLoad from '../src/vue-lazy-load.vue'
 
 test('Renders', () => {
   // No idea how to fix this, PR's are welcome.
-  //@ts-ignore
+  // @ts-expect-error
   const wrapper = shallowMount(VueLazyLoad)
   expect(wrapper.exists()).toBe(true)
 })
@@ -12,7 +12,7 @@ test('Renders', () => {
 test('Shows placeholder', () => {
   const placeholderHtml = '<div class="placeholder"></div>'
   // No idea how to fix this, PR's are welcome.
-  //@ts-ignore
+  // @ts-expect-error
   const wrapper = shallowMount(VueLazyLoad, {
     slots: {
       placeholder: placeholderHtml,

@@ -46,7 +46,6 @@
                 d="M 600,1200 C 268.65,1200 0,931.35 0,600 0,268.65
               268.65,0 600,0 c 331.35,0 600,268.65 600,600 0,331.35 -268.65,600 -600,
               600 z M 450,300.45 450,899.55 900,600 450,300.45 z"
-                id="path16995"
                 fill="#fff"
               />
             </svg>
@@ -81,7 +80,7 @@ interface Props {
   autoplay: boolean;
   loop: boolean;
   mute: boolean;
-  playIconAlt?: string;
+  playIconAlt: string;
 }
 
 const slots = defineSlots<{
@@ -90,14 +89,12 @@ const slots = defineSlots<{
 }>();
 
 const props = defineProps<Props>();
-const { video, autoplay, loop } = props;
+const { video, autoplay, loop, playIconAlt } = props;
 
 const isPlaying = ref(autoplay);
 const maxRatio = 1.5;
 const width = ref<number>(0);
 const root = ref<HTMLElement | null>(null);
-
-const playIconAlt = computed(() => props.playIconAlt ?? "play video");
 
 const canvasHeight = computed(() => {
   // prevent canvas from getting a higher ratio than 3:2 (1.5:1)

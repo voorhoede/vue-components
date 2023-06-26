@@ -3,7 +3,7 @@ import { shallowMount } from '@vue/test-utils'
 import VueDatoVideo from '../src/vue-dato-video.vue'
 
 test('Renders', () => {
-  //@ts-ignore
+  // @ts-expect-error
   const wrapper = shallowMount(VueDatoVideo, {
     props: {
       loop: false,
