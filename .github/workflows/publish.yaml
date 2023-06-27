@@ -33,4 +33,5 @@ jobs:
         uses: changesets/action@v1
         with:
           publish: npm publish --dry-run
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
