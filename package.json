@@ -12,6 +12,7 @@
     "test": "npm run test --workspaces"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "@types/node": "^18.16.9",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/test-utils": "^2.3.2",
