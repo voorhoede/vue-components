@@ -1,2 +1,0 @@
-# @voorhoede/vue-lazy-load
-
