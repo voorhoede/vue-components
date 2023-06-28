@@ -2,8 +2,6 @@
   "name": "vue-components",
   "version": "1.0.0",
   "private": true,
-  "author": "De Voorhoede",
-  "license": "ISC",
   "workspaces": [
     "packages/vue-lazy-load",
     "packages/vue-dato-video"
