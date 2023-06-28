@@ -23,6 +23,11 @@
   "dependencies": {
     "vue": "^3.3.2"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/voorhoede/vue-components.git",
+    "directory": "packages/vue-lazy-load"
+  },
   "author": "De Voorhoede",
   "license": "ISC"
 }
