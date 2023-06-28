@@ -1,7 +1,7 @@
 {
   "name": "vue-components",
   "version": "1.0.0",
-  "private": true",
+  "private": "true",
   "author": "De Voorhoede",
   "license": "ISC",
   "workspaces": [
