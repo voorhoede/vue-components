@@ -1,5 +1,6 @@
 ---
 "@voorhoede/vue-lazy-load": major
+"@voorhoede/vue-dato-video": major
 ---
 
-test
+Refactor to Vue 3 with composition api
