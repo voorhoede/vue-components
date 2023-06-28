@@ -1,6 +1,6 @@
 {
   "name": "@voorhoede/vue-dato-video",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "type": "module",
   "exports": {
     ".": {
@@ -24,7 +24,7 @@
     "prepack": "npm run build"
   },
   "dependencies": {
-    "@voorhoede/vue-lazy-load": "^1.2.9",
+    "@voorhoede/vue-lazy-load": "^2.0.0",
     "vue": "^3.3.2"
   },
   "author": "De Voorhoede",
