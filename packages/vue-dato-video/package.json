@@ -1,7 +1,7 @@
 {
   "name": "@voorhoede/vue-dato-video",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "exports": {
     ".": {
@@ -24,7 +24,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@voorhoede/vue-lazy-load": "^1.0.0",
+    "@voorhoede/vue-lazy-load": "^2.0.0",
     "vue": "^3.3.2"
   }
 }
