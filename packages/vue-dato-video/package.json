@@ -1,6 +1,6 @@
 {
   "name": "@voorhoede/vue-dato-video",
-  "version": "2.0.0",
+  "version": "1.0.7",
   "type": "module",
   "exports": {
     ".": {
@@ -20,10 +20,13 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "prepack": "npm run build"
   },
   "dependencies": {
-    "@voorhoede/vue-lazy-load": "^2.0.0",
+    "@voorhoede/vue-lazy-load": "^1.2.9",
     "vue": "^3.3.2"
-  }
+  },
+  "author": "De Voorhoede",
+  "license": "ISC"
 }
