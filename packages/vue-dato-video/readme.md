@@ -56,7 +56,7 @@ Use the component in your template:
 />
 ```
 
-The CSS file should be imported seperately in the way you desire. It's located at `@voorhoede/vue-dato-video/dist/style.css`.
+The CSS file should be imported seperately in the way you desire. It's located at `@voorhoede/vue-dato-video/style`.
 
 ## API
 
