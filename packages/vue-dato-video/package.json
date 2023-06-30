@@ -5,7 +5,10 @@
   "types": "./dist/main.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/vue-dato-video.js"
+      "import": {
+        "default": "./dist/vue-dato-video.js",
+        "types": "./dist/main.d.ts"
+      }
     },
     "./style": {
       "import": "./dist/style.css"
