@@ -1,5 +1,16 @@
 # @voorhoede/vue-dato-video
 
+## 3.0.0
+
+### Major Changes
+
+- 305f877: Adjust package.json to fix types
+
+### Patch Changes
+
+- Updated dependencies [305f877]
+  - @voorhoede/vue-lazy-load@3.0.0
+
 ## 2.0.0
 
 ### Major Changes
