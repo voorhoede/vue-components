@@ -2,14 +2,12 @@
   "name": "@voorhoede/vue-dato-video",
   "version": "2.0.0",
   "type": "module",
+  "types": "./dist/main.d.ts",
   "exports": {
     ".": {
-      "import": {
-        "default": "./dist/vue-dato-video.js",
-        "types": "./dist/main.d.ts"
-      }
+      "import": "./dist/vue-dato-video.js"
     },
-    "./dist/style.css": {
+    "./style": {
       "import": "./dist/style.css"
     }
   },

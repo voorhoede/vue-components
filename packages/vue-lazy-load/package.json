@@ -2,12 +2,13 @@
   "name": "@voorhoede/vue-lazy-load",
   "version": "2.0.0",
   "type": "module",
+  "types": "./dist/main.d.ts",
   "exports": {
     ".": {
-      "import": {
-        "default": "./dist/vue-lazy-load.js",
-        "types": "./dist/main.d.ts"
-      }
+      "import": "./dist/vue-dato-video.js"
+    },
+    "./style": {
+      "import": "./dist/style.css"
     }
   },
   "files": [
