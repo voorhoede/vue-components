@@ -5,10 +5,8 @@
   "types": "./dist/main.d.ts",
   "exports": {
     ".": {
-      "import": {
-        "default": "./dist/vue-lazy-load.js",
-        "types": "./dist/main.d.ts"
-      }
+      "import": "./dist/vue-lazy-load.js",
+      "types": "./dist/main.d.ts"
     }
   },
   "files": [
