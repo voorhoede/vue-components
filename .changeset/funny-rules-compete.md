@@ -3,4 +3,4 @@
 "@voorhoede/vue-lazy-load": major
 ---
 
-Adjust packages.json to fix types
+Adjust package.json to fix types
