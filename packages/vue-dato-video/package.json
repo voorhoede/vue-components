@@ -23,7 +23,6 @@
     "prepack": "npm run build"
   },
   "dependencies": {
-    "@voorhoede/vue-lazy-load": "^3.0.0",
     "vue": "^3.3.2"
   },
   "author": "De Voorhoede",
