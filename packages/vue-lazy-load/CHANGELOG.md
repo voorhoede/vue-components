@@ -1,5 +1,11 @@
 # @voorhoede/vue-lazy-load
 
+## 3.1.0
+
+### Minor Changes
+
+- 23e3dfe: Implement native lazy loading for the thumbnail image.
+
 ## 3.0.0
 
 ### Major Changes
