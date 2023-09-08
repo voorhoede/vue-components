@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- e68e5a1: Implement native lazy loading for the thumbnail image.
+- Accidental version bump.
 
 ## 3.0.0
 
