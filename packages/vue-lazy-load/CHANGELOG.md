@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- 23e3dfe: Implement native lazy loading for the thumbnail image.
+- e68e5a1: Implement native lazy loading for the thumbnail image.
 
 ## 3.0.0
 
