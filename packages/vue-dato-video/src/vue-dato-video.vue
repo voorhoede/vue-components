@@ -5,17 +5,7 @@
         class="vue-dato-video__background-container"
         :style="{ aspectRatio }"
       >
-        <lazy-load>
-          <div class="vue-dato-video__background">
-            <div
-              class="vue-dato-video__cover"
-              :style="{
-                backgroundImage: `url(${imageUrl})`,
-                width: coverWidth,
-              }"
-            ></div>
-          </div>
-        </lazy-load>
+        <img class="vue-dato-video__cover" :src="imageUrl" loading="lazy" alt="" />
         <iframe
           v-if="isPlaying"
           class="vue-dato-video__iframe"
@@ -61,7 +51,6 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
-import { VueLazyLoad as LazyLoad } from "@voorhoede/vue-lazy-load";
 
 const binaryBoolean = (value: boolean) => (value ? 1 : 0);
 
@@ -103,10 +92,6 @@ const canvasHeight = computed(() => {
 
 const aspectRatio = computed(() => {
   return video.width / canvasHeight.value;
-});
-
-const coverWidth = computed(() => {
-  return `${((video.width * maxRatio) / video.height) * 100}%`;
 });
 
 const imageUrl = computed(() => {
@@ -177,12 +162,12 @@ onMounted(() => {
 }
 
 .vue-dato-video__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  background-size: cover;
-  background-position: center center;
+  object-fit: cover;
 }
 
 .vue-dato-video__iframe {
