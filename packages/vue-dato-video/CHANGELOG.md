@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- dfc8a02: Implement native lazy loading for the thumbnail image.
+- e68e5a1: Implement native lazy loading for the thumbnail image.
 
 ## 3.0.0
 
