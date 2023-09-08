@@ -1,5 +1,11 @@
 # @voorhoede/vue-dato-video
 
+## 3.1.0
+
+### Minor Changes
+
+- dfc8a02: Implement native lazy loading for the thumbnail image.
+
 ## 3.0.0
 
 ### Major Changes
